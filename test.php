@@ -1,3 +1,6 @@
 <?php
-    $name = "World";
-    echo "<h1>Hello, $name!</h1>";
+$name = "World";
+if (isset($_GET['name'])) {
+    $name = $_GET['name'];
+}
+echo "<h1>Hello, $name!</h1>";
