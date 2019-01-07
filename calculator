@@ -1,0 +1,30 @@
+<?php
+
+$x = "x";
+if (!isset($_GET['x'])) {
+    print 'incorrect or incomplete data';
+    exit;
+}
+$y = "y";
+if (!isset($_GET['y'])) {
+    print 'Incorrect or incomplete data';
+    exit;
+}
+
+if (!isset($_GET['op'])) {
+    print "Unrecognized operation: $op";
+    exit;
+}
+
+$op = $_GET['op'];
+        if ($op == 'sum')
+            print "$x + $y";
+        else if ($op == 'subtract')
+            print "$x - $y";
+        else if ($op == 'multiply')
+            print "$x * $y";
+        else if ($op == 'divide')
+            if ($y == 0)
+                print 'Incorrect or incomplete data';
+            else
+                print "$x / $y";
